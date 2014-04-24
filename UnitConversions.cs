@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Gallio.Runner.Reports.Schema;
 
 namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
 {
@@ -50,7 +51,6 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
         {
             public static double FeetPSintoInchesPS(double ftsec)
             {
-                //Same as Feet to Inches
                 return Length.FeetToInches(ftsec);
             }
 
@@ -77,7 +77,53 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
                 return FeetPS;
             }
 
+            public static double InchesPSintoKPH(double inchsec)
+            {
+                double KPH = inchsec*0.09144;
+                return KPH;
+            }
 
+            public static double InchesPSintoMPH(double inchsec)
+            {
+                double MPH = inchsec*0.0568181;
+                return MPH;
+            }
+
+            public static double InchesPSintoMetersPS(double inchsec)
+            {
+                double MetersPS = inchsec*0.0254;
+                return MetersPS;
+            }
+
+            public static double KPHintoFeetPS(double KPH)
+            {
+                double feetPS = KPH*0.911344;
+                return feetPS;
+            }
+
+            public static double KPHintoInchPS(double KPH)
+            {
+                double inchPS = KPH*10.936133;
+                return inchPS;
+            }
+
+            public static double KPHintoMetersPS(double KPH)
+            {
+                double metersPS = KPH*0.277778;
+                return metersPS;
+            }
+
+            public static double KPHintoMPH(double KPH)
+            {
+                double MPH = KPH*0.621371;
+                return MPH;
+            }
+
+            public static double MetersPSintoFeetPS(double Metersec)
+            {
+                double feetps = Metersec*3.28084;
+                return feetps;
+            }
             
         }
 
