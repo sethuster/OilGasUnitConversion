@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Interop;
 using Gallio.Runner.Reports.Schema;
 
 namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
@@ -183,6 +184,152 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
             {
                 double meterps = mph*0.44704;
                 return meterps;
+            }
+        }
+
+        public static class Temperature
+        {
+            public static double FahrenheitIntoCelsius(double fahrenheit)
+            {
+                double celsius = (fahrenheit - 32)*0.5556;
+                return celsius;
+            }
+
+            public static double CelsiusIntoFahrenheit(double celsius)
+            {
+                double fahrenheit = (celsius*1.8) + 32;
+                return fahrenheit;
+            }
+        }
+
+        public static class Pressure
+        {
+            public static double PSIintoKPA(double psi)
+            {
+                //KPa = kilopascals 
+                double KPa = psi*6.89475729;
+                return KPa;
+            }
+
+            public static double PSIintoKSI(double psi)
+            {
+                double ksi = psi/1000;
+                return ksi;
+            }
+
+            public static double PSIintoMegaPa(double psi)
+            {
+                //MPa = megapascals
+                double MPa = psi*0.0068947448;
+                return MPa;
+            }
+
+            public static double PSIintoPascal(double psi)
+            {
+                double pascal = psi*6894.744825;
+                return pascal;
+            }
+
+            public static double PSIintoBar(double psi)
+            {
+                double bar = psi*0.06894745;
+                return bar;
+            }
+
+            public static double KPaIntoPSI(double KPa)
+            {
+                double psi = KPa*0.145038;
+                return psi;
+            }
+
+            public static double KPaIntoKSI(double KPa)
+            {
+                double ksi = KPa*0.000145038;
+                return ksi;
+            }
+
+            public static double KPaIntoMPa(double KPa)
+            {
+                double MPa = KPa*0.001;
+                return MPa;
+            }
+
+            public static double KPaIntoPascal(double KPa)
+            {
+                double pascal = KPa*1000;
+                return pascal;
+            }
+
+            public static double KPaIntoBar(double KPa)
+            {
+                double bar = KPa*0.01;
+                return bar;
+            }
+
+            public static double KSIIntoPSI(double ksi)
+            {
+                double psi = ksi*1000;
+                return psi;
+            }
+
+            public static double KSIIntoKPA(double ksi)
+            {
+                double KPA = ksi*6894.744825;
+                return KPA;
+            }
+
+            public static double KSIIntoMPA(double ksi)
+            {
+                double MPA = ksi*6.894745;
+                return MPA;
+            }
+
+            public static double KSIIntoPa(double ksi)
+            {
+                double pascal = ksi*6894744.825494;
+                return pascal;
+            }
+
+            public static double KSIIntoBar(double ksi)
+            {
+                double bar = ksi*68.947448;
+                return bar;
+            }
+
+            public static double MPaIntoPSI(double mpa)
+            {
+                double psi = mpa*145.038;
+                return psi;
+            }
+
+            public static double MPAIntoKPa(double mpa)
+            {
+                double kpa = mpa*1000;
+                return kpa;
+            }
+
+            public static double MPAIntoksi(double mpa)
+            {
+                double ksi = mpa*0.145038;
+                return ksi;
+            }
+
+            public static double MPAintoPa(double mpa)
+            {
+                double pascal = mpa*1000000;
+                return pascal;
+            }
+
+            public static double MPAintoBar(double mpa)
+            {
+                double bar = mpa*10;
+                return bar;
+            }
+
+            public static double PascalIntoPSI(double pascal)
+            {
+                double psi = pascal*0.000145038;
+                return psi;
             }
         }
 
