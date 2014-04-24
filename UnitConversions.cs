@@ -331,6 +331,61 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
                 double psi = pascal*0.000145038;
                 return psi;
             }
+
+            public static double PascalintoKPA(double pascal)
+            {
+                double kpa = pascal*0.001;
+                return kpa;
+            }
+
+            public static double PascalintoKSI(double pascal)
+            {
+                double ksi = pascal*(1.45038*(10 ^ -7));
+                return ksi;
+            }
+
+            public static double PascalintoMPA(double pascal)
+            {
+                double mpa = pascal*0.000001;
+                return mpa;
+            }
+
+            public static double PascalintoBar(double pascal)
+            {
+                double bar = pascal*0.00001;
+                return bar;
+            }
+
+            public static double BarintoPSI(double bar)
+            {
+                double psi = bar*100000;
+                return psi;
+            }
+
+            public static double BarintoKPA(double bar)
+            {
+                double kpa = bar*100;
+                return kpa;
+            }
+
+            public static double BarintoKSI(double bar)
+            {
+                double ksi = bar*0.0145038;
+                return ksi;
+            }
+
+            public static double BarintoMPA(double bar)
+            {
+                double MPA = bar*0.1;
+                return MPA;
+            }
+
+            public static double BarintoPascal(double bar)
+            {
+                double pascal = bar*100000;
+                return pascal;
+            }
+
         }
 
         public double Circumference(double radius)
