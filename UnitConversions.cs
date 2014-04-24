@@ -388,13 +388,16 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
 
         }
 
-        public double Circumference(double radius)
+        public static class Measurement
         {
-            //placeholder for circumference C = 2pi * r
+            public static double Circumference(double radius)
+            {
+                //placeholder for circumference C = 2pi * r
+                double circum = (2*Math.PI)*radius;
+                return circum;
+            }
 
-            return new double();
         }
-
 
     }
 }
