@@ -45,6 +45,24 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
                 double meters = feet/3.2808;
                 return meters;
             }
+
+            public static double MetersToFeet(double meters)
+            {
+                double feet = meters*3.28084;
+                return feet;
+            }
+
+            public static double MetersToInches(double meters)
+            {
+                double inches = meters*39.3701;
+                return inches;
+            }
+
+            public static double MetersToMM(double meters)
+            {
+                double milimeters = meters*1000;
+                return milimeters;
+            }
         }
 
         public static class Velocity
@@ -124,7 +142,48 @@ namespace Golem.White.ScreenObjects.LQP.LQP_Functionality
                 double feetps = Metersec*3.28084;
                 return feetps;
             }
-            
+
+            public static double MetersPSintoInchPS(double metersec)
+            {
+                double inchesps = metersec*39.3700787;
+                return inchesps;
+            }
+
+            public static double MetersPSintoKPH(double metersec)
+            {
+                double KPH = metersec*3.6;
+                return KPH;
+            }
+
+            public static double MetersPSintoMPH(double metersec)
+            {
+                double MPH = metersec*2.23694;
+                return MPH;
+            }
+
+            public static double MPHintoFeetPS(double mph)
+            {
+                double feetps = mph*1.46667;
+                return feetps;
+            }
+
+            public static double MPHintoInchPS(double mph)
+            {
+                double inchps = mph*17.6;
+                return inchps;
+            }
+
+            public static double MPHintoKPH(double mph)
+            {
+                double kph = mph*1.60934;
+                return kph;
+            }
+
+            public static double MPHintoMetersPS(double mph)
+            {
+                double meterps = mph*0.44704;
+                return meterps;
+            }
         }
 
         public double Circumference(double radius)
